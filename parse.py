@@ -12,7 +12,6 @@ template = (
 
 model = OllamaLLM(model="llama3")
 
-
 def parse_with_ollama(dom_chunks, parse_description):
     prompt = ChatPromptTemplate.from_template(template)
     chain = prompt | model
