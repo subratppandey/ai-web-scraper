@@ -8,8 +8,6 @@ AUTH = 'USER:PASS'
 SBR_WEBDRIVER = f'https://{AUTH}@zproxy.lum-superproxy.io:9515'
 
 def scrape_website(website):
-    print("Launching chrome browser...")
-
     sbr_connection = ChromiumRemoteConnection(SBR_WEBDRIVER, 'goog', 'chrome')
     with Remote(sbr_connection, options=ChromeOptions()) as driver:
         driver.get(website)
