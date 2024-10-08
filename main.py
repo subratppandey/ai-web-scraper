@@ -24,7 +24,6 @@ if "dom_content" in st.session_state:
         if parse_description:
             st.write("Parsing the content...")
 
-            # Parse the content with Ollama
             dom_chunks = split_dom_content(st.session_state.dom_content)
             parsed_result = parse_with_ollama(dom_chunks, parse_description)
             st.write(parsed_result)
